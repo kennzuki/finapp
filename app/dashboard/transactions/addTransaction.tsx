@@ -2,7 +2,7 @@ import { FaPlus } from "react-icons/fa";
 import Link from 'next/link';
 
 
-export function CreateInvoice() {
+export function CreateTransaction() {
   return (
     <Link
       href="/dashboard/transactions/create"
