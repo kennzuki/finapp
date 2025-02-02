@@ -13,3 +13,26 @@ export function CreateTransaction() {
     </Link>
   );
 }
+
+// export function UpdateTransaction({ id }: { id: string }) {
+//   return (
+//     <Link
+//       href={`/dashboard/invoices/${id}/edit`}
+//       className="rounded-md border p-2 hover:bg-gray-100"
+//     >
+//       <PencilIcon className="w-5" />
+//     </Link>
+//   );
+// }
+
+// export function DeleteTransaction({ id }: { id: string }) {
+//   const deleteInvoiceWithId = deleteInvoice.bind(null, id);
+//   return (
+//     <form action={deleteInvoiceWithId}>
+//     <button type="submit" className="rounded-md border p-2 hover:bg-gray-100">
+//       <span className="sr-only">Delete</span>
+//       <TrashIcon className="w-4" />
+//     </button>
+//   </form>
+//   );
+// }

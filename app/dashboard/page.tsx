@@ -1,5 +1,5 @@
 import React from 'react'
-import TransactionPage from './transactions/page'
+
 import TransactionTable from './table'
 
 const Page = () => {
@@ -20,7 +20,7 @@ const Page = () => {
           <p className="text-2xl font-bold">$4,023</p>
         </article>
         <article className="col-span-3 row-span-2 row-start-2"></article>
-        <article className="col-span-3 col-start-1 row-start-4"> <TransactionTable/></article>
+        <article className="col-span-3 col-start-1 row-start-4 p-2 overflow-auto"> <TransactionTable/></article>
         <article className="col-span-3 row-span-4 col-start-4 row-start-2"></article>
       </section>
      
