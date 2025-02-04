@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { prisma } from '@/lib/db';
+import { DeleteTransaction } from './transactions/buttons';
 
 const transactions = await prisma.expense.findMany();
 
@@ -26,6 +27,9 @@ const TransactionTable = () => {
               <td className='px-6 py-4 text-sm text-gray-900'>
                 {transaction.category}
               </td>
+              <td className='px-6 py-4 text-sm text-gray-900'>
+                {transaction.createdAt.toLocaleString()}
+              </td>
               <td
                 className={`px-6 py-4 text-sm text-right ${
                   transaction.amount >= 0 ? 'text-green-600' : 'text-red-600'
@@ -38,11 +42,11 @@ const TransactionTable = () => {
                   Edit
                 </button>
               </td>
+              <td className='px-6 py-4 whitespace-nowrap text-sm text-right font-medium '></td>
               <td className='px-6 py-4 whitespace-nowrap text-sm text-right font-medium '>
-                <button className='py-2 px-4 bg-red-400 text-white font-bold rounded-xl'>
-                  Delete
-                </button>
+               <DeleteTransaction id={transaction.id} />
               </td>
+              <td className='px-6 py-4 whitespace-nowrap text-sm text-right font-medium '></td>
             </tr>
           ))}
         </tbody>

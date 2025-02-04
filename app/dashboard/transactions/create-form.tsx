@@ -27,12 +27,6 @@ export default function Form() {
           <option value='debt' className='w-full dark:bg-white text-black'>
             Debt
           </option>
-          <option value='utilities' className='w-full dark:bg-white text-black'>
-           Utilities
-          </option>
-          <option value='food' className='w-full dark:bg-white text-black'>
-            Food
-          </option>
         </select>
 
         <input
