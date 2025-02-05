@@ -6,9 +6,9 @@ import { redirect } from 'next/navigation';
 export async function createTransactions(formData: FormData) {
   await prisma.expense.create({
     data: {
-      userId: parseInt(formData.get('userId') as string),
       category: formData.get('category') as string,
       amount: parseInt(formData.get('amount') as string),
+      description: formData.get('description') as string,
     },
   });
     revalidatePath('/dashboard/transactions');
@@ -21,6 +21,7 @@ export async function updateTransactions(id: number, formData: FormData) {
       data: {
         category: formData.get('category') as string,
         amount: parseInt(formData.get('amount') as string),
+        description: formData.get('description') as string,
       },
     });
     revalidatePath('/dashboard/transactions');
