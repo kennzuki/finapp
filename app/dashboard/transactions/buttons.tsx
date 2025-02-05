@@ -5,13 +5,13 @@ import { FaTrash } from "react-icons/fa";
 import { FaPencil } from "react-icons/fa6";
 import Link from 'next/link';
 
-export function UpdateInvoice({ id }: { id: string }) {
+export function UpdateInvoice({ id }: { id: number }) {
     return (
       <Link
         href={`/dashboard/invoices/${id}/edit`}
-        className="rounded-md border p-2 hover:bg-gray-100"
+        className="rounded-md  p-6 hover:bg-gray-100"
       >
-        <FaPencil className="w-5" />
+        <FaPencil className="w-5 md:ml-4 text-orange-500  " />
       </Link>
     );
   }
@@ -21,8 +21,8 @@ export function DeleteTransaction({ id }: { id: number }) {
     return (        
               <form action={deleteTransactionWithId} >
               <button type="submit" className="rounded-md border p-2 hover:bg-gray-100">
-                <span className="sr-only">Delete</span>
-                <FaTrash className="w-4" />
+                <span className="sr-only text-black">Delete</span>
+                <FaTrash className="w-4 text-red-800" />
               </button>
             </form>
   
