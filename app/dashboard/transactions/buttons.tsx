@@ -5,10 +5,10 @@ import { FaTrash } from "react-icons/fa";
 import { FaPencil } from "react-icons/fa6";
 import Link from 'next/link';
 
-export function UpdateInvoice({ id }: { id: number }) {
+export function UpdateTransactions({ id }: { id: number }) {
     return (
       <Link
-        href={`/dashboard/invoices/${id}/edit`}
+        href={`/dashboard/transactions/${id}/edit`}
         className="rounded-md  p-6 hover:bg-gray-100"
       >
         <FaPencil className="w-5 md:ml-4 text-orange-500  " />

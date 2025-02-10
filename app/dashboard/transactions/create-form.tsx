@@ -1,5 +1,5 @@
 'use client';
-import { createTransactions } from "@/lib/actions";
+import { createTransactions } from '@/lib/actions';
 // import { Transactions } from '@/lib/definations';
 
 export default function Form() {
@@ -8,9 +8,10 @@ export default function Form() {
       <h1 className='dark:text-white text-2xl font-bold uppercase mb-12 text-center'>
         Add a transaction
       </h1>
-      <form action={createTransactions} className='space-y-4 max-w-md mx-auto p-6 bg-white rounded-lg shadow-md h-1/2 w-1/2'>
-        <input type='date' name='date' className='w-full dark:bg-white' />
-
+      <form
+        action={createTransactions}
+        className='space-y-4 max-w-md mx-auto p-6 bg-white rounded-lg shadow-md h-1/2 w-1/2'
+      >
         <input
           type='number'
           name='amount'
