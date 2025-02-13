@@ -15,7 +15,7 @@ export async function createTransactions(formData: FormData) {
     redirect('/dashboard/transactions');
 }
 
-export async function updateTransactions(id: number, formData: FormData) { 
+export async function updateTransactions(formData: FormData,id: number) { 
     await prisma.expense.update({
       where: { id },
       data: {
@@ -32,4 +32,9 @@ export async function deleteTransactions(id: number) {
     await prisma.expense.delete({ where: { id } });
     revalidatePath('/dashboard/transactions');
     redirect('/dashboard/transactions');
- }
+}
+ 
+
+
+
+
