@@ -2,15 +2,11 @@ import React from 'react';
 
 export const Banner = () => {
   return (
-    <div>
-      <h1>Welcome to Finance App</h1>
-      <p className=''>
-        Take control of your financial future with our intuitive budget app.
-        Track expenses effortlessly, set smart savings goals, and watch your
-        wealth grow—all from the palm of your hand. Stop wondering where your
-        money goes, and start knowing exactly where it should be. Your journey
-        to financial freedom begins with a single tap.
-      </p>
+    <div className='bg-black text-white p-8' >
+          <h1>Welcome to Fin App</h1>
+          <h2 className="text-4xl font-bold mb-8">FinApp</h2>
+          <p className="text-xl">Your finance app, reimagined.</p>
+      
     </div>
   );
 };
