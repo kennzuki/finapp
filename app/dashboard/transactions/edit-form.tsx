@@ -5,10 +5,12 @@ import Link from 'next/link';
 
 
 export default function EditTransactionForm() {
+  // Fetch the existing transaction to populate the form fields.
+  
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
       <form
-      //  action={updateTransactions}  // This should be the route to your server-side function.
+       
       className='flex flex-col gap-8 [&_input]:border [&_input]:p-4 [&_input]:rounded'
     >
       <input
@@ -49,7 +51,8 @@ export default function EditTransactionForm() {
         >
           Cancel
         </Link>
-      </div>
+        </div>
+        
     </form>
     </div>
 
