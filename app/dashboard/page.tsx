@@ -4,6 +4,8 @@ import TransactionTable from './table';
 import { IncomeSum, DebtSum } from '@/lib/actions';
 import ExpenseSkeleton from '@/app/components/Skeleton';
 
+import  { PieComponent } from './chart';
+
 type IncomeSumType = {
   _sum: {
     amount: number | null;
@@ -52,7 +54,9 @@ const Page = async () => {
           {' '}
           <TransactionTable />
         </article>
-        <article className='col-span-3 row-span-4 col-start-4 row-start-2'></article>
+        <article className='col-span-3 row-span-4 col-start-4 row-start-2'>
+          <PieComponent />
+        </article>
       </section>
     </div>
   );
