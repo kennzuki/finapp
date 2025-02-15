@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 // import { prisma } from '@/lib/db';
 import TransactionTable from './table';
-import { IncomeSum,DebtSum } from '@/lib/actions';
+import { IncomeSum, DebtSum } from '@/lib/actions';
+import ExpenseSkeleton from '@/app/components/Skeleton';
 
 type IncomeSumType = {
   _sum: {
@@ -32,13 +33,15 @@ const Page = async () => {
       <section className='grid xs:grid-cols-1 md:grid-cols-5 gap-4 [&_article]:p-6 [&_article]:bg-[#061B3E] [&_article]:rounded-xl w-full'>
         <article className='bg-black text-white col-span-2 capitalise'>
           <h2 className=''>current balance</h2>
+          <Suspense fallback={<ExpenseSkeleton />}/>
           <p className='text-2xl font-bold'>${balance}</p>
         </article>
         {/* expense income */}
         <article className='bg-black text-white col-span-2 capitalise'>
           <h2 className=''>Income</h2>
-          <p className='text-2xl font-bold'> ${incomeSum._sum.amount}</p>
+          <p className='text-2xl font-bold'> ${incomeSum._sum.amount ?? 0}</p>
         </article>
+        
         {/* end */}
         <article className='bg-black text-white col-span-2 col-start-5 '>
           <h2 className=''>Expenses</h2>
